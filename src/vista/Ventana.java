@@ -636,7 +636,7 @@ public class Ventana extends javax.swing.JFrame {
         Archivo archivo = new Archivo(rutaArchivo);
         try {
             String descifrarYverificar = ch.descifrarYverificar(archivo.getBytes(), llavePrivada, llavePublica);
-            archivo.saveInfo("DescifradoYVerificado", descifrarYverificar);
+            archivo.saveInfo("DescifradoYVerificado.txt", descifrarYverificar);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Ocurrió un error");
             Logger.getLogger(Ventana.class.getName()).log(Level.SEVERE, null, ex);
