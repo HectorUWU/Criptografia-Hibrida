@@ -542,6 +542,14 @@ public class Ventana extends javax.swing.JFrame {
 
     private void btnVerificarPublicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarPublicaActionPerformed
         // TODO add your handling code here:
+         abrirArchivo((byte) 1);
+        if (rutaLlavePublica != null) {
+            Archivo archivo = new Archivo(rutaLlavePublica);
+            lblVerificarRutaPublica.setText(rutaLlavePublica);
+            llavePublica = (PublicKey) archivo.leerLlave();
+        } else {
+            JOptionPane.showMessageDialog(null, "Archivo no válido");
+        }
     }//GEN-LAST:event_btnVerificarPublicaActionPerformed
 
     private void btnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarActionPerformed
