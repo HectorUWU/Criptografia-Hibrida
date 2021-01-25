@@ -52,7 +52,7 @@ public class CryptoHibrida {
         if(firma.equals(digestStr))
             JOptionPane.showMessageDialog(null, "La firma es correcta");
         else
-            JOptionPane.showMessageDialog(null, "La firma es correcta");
+            JOptionPane.showMessageDialog(null, "La firma es incorrecta");
         return mensaje;
     }
     
